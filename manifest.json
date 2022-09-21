@@ -1,0 +1,56 @@
+{
+  "name": "safe-inventory",
+  "vendor": "demoeu",
+  "version": "0.0.1",
+  "title": "Jsonplaceholder API",
+  "description": "Jsonplaceholder API built on VTEX IO",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "builders": {
+    "graphql": "1.x",
+    "node": "6.x",
+    "admin": "0.x",
+    "messages": "1.x",
+    "react": "3.x",
+    "store": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "graphql-query"
+    },
+    {
+      "name": "LogisticsAdmin"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,6 @@
+{
+  "admin.app.twitter": {
+    "component": "AdminSafeInventorySettings",
+    "path": "/admin/app/safeinventory"
+  }
+}

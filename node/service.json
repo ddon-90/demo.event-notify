@@ -1,0 +1,13 @@
+{
+  "memory": 1024,
+  "ttl": 60,
+  "timeout": 5,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "updateInventory": {
+      "keys": ["broadcaster.notification"]
+    }
+  }
+}

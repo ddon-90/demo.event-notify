@@ -1,0 +1,3 @@
+mutation config($safeInventoryLimit: String) {
+  config(config: { safeInventoryLimit: $safeInventoryLimit })
+}
