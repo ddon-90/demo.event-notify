@@ -61,7 +61,7 @@ https://{{workspace}}--{{account}}.myvtex.com/admin/safeinventory
 
 7. Input a value for the "Safe Inventory Limit", eg. 20
 
-8. On the master workspace, set up the Catalog Broadcaster app in order to receive notifications on the workspace you are working on.
+8. On the master workspace, set up the Catalog Broadcaster app in order to receive notifications on the workspace you are working on
 
 ![Safe Inventory](./images/safe-inventory-3.png)
 ![Safe Inventory](./images/safe-inventory-4.png)
@@ -70,7 +70,7 @@ https://{{workspace}}--{{account}}.myvtex.com/admin/safeinventory
 
 ![Safe Inventory](./images/safe-inventory-2.png)
 
-10. While linking, show that the app get notified when there is a change to the inventory
+10. While linking, show the notifications received by the app every time there is a change to the inventory (This might takes between 0s to 60s)
 
 ![Safe Inventory](./images/safe-inventory-5.png)
 
