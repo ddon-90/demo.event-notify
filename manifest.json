@@ -1,21 +1,16 @@
 {
-  "name": "safe-inventory",
+  "name": "event-notify",
   "vendor": "demoeu",
   "version": "0.0.1",
-  "title": "Jsonplaceholder API",
-  "description": "Jsonplaceholder API built on VTEX IO",
+  "title": "Event Notify",
+  "description": "Example of a custom back-end application that listens to catalog changes and acts accordingly.",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
   "dependencies": {
     "vtex.styleguide": "9.x"
   },
   "builders": {
-    "graphql": "1.x",
-    "node": "6.x",
-    "admin": "0.x",
-    "messages": "1.x",
-    "react": "3.x",
-    "store": "0.x"
+    "node": "6.x"
   },
   "scripts": {
     "prereleasy": "bash lint.sh"
@@ -52,5 +47,16 @@
       }
     }
   ],
+  "settingsSchema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "email": {
+        "title": "Email",
+        "type": "string",
+        "description": "Email of the user that will be notify about catalog events."
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

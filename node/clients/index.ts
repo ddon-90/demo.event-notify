@@ -1,10 +1,10 @@
 import { IOClients } from '@vtex/api'
 
-import Logistics from './logistics'
+import EmailClient from './email'
 
 // Extend the default IOClients implementation with our own custom clients.
 export class Clients extends IOClients {
-  public get logistics() {
-    return this.getOrSet('logistics', Logistics)
+  public get email() {
+    return this.getOrSet('email', EmailClient)
   }
 }

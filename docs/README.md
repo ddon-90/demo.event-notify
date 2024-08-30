@@ -1,14 +1,12 @@
 ## Name:
-Safe Inventory
+Event Notify
 
 ## Description:
-Example of a custom back-end application that listens to catalog changes and acts accordingly. When the stock level for an SKU changes and it's below a certain threshold which is configurable on the Admin panel, this application set the inventory to 0, otherwise, it leaves it untouched.
+Example of a custom back-end application that listens to catalog changes and acts accordingly.
 
 ## Proof points:
 - Back-end customization
-- Admin extension
-- External API calls
-- GraphQL on VTEX IO
+- App settings
 - Listening to events
 
 ## How to demo:
@@ -31,10 +29,10 @@ vtex use {{workspace}}
 
 ```
 {
-  "name": "safe-inventory",
+  "name": "event-notify",
   "vendor": "{{account}}",
   "version": "0.0.1",
-  "title": "Safe Inventory",
+  "title": "Event Notify",
   "description": "Example of a custom back-end application that listens to catalog changes and acts accordingly.",
   "mustUpdateAt": "2018-01-04",
   ...
@@ -48,30 +46,7 @@ vtex use {{workspace}}
 vtex link
 ```
 
-6. After the linking, open the admin panel and show that we extended it with a brand new section
-
-```
-Navigate to:
-
-https://{{workspace}}--{{account}}.myvtex.com/admin/safeinventory
-
-```
-
-![Safe Inventory](./images/safe-inventory-1.png)
-
-7. Input a value for the "Safe Inventory Limit", eg. 20
-
-8. On the master workspace, set up the Catalog Broadcaster app in order to receive notifications on the workspace you are working on
+6. On the master workspace, set up the Catalog Broadcaster app in order to receive notifications on the workspace you are working on
 
 ![Safe Inventory](./images/safe-inventory-3.png)
 ![Safe Inventory](./images/safe-inventory-4.png)
-
-9. On the master workspace, edit the inventory for an existing SKU, eg. SKU 1 and quantity 15
-
-![Safe Inventory](./images/safe-inventory-2.png)
-
-10. While linking, show the notifications received by the app every time there is a change to the inventory (This might takes between 0s to 60s)
-
-![Safe Inventory](./images/safe-inventory-5.png)
-
-11. If you added a stock below the "Safe Inventory Limit", the new stock should be set automatically to 0, otherwise, it should be left untouched

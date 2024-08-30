@@ -2,9 +2,7 @@ import type { ClientsConfig, ServiceContext, ParamsContext, RecorderState } from
 import { Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { getConfig } from './resolvers/getConfig'
-import { saveConfig } from './resolvers/saveConfig'
-import { updateInventoryMiddleware } from './middlewares/updateInventoryMiddleware'
+import { notifyMiddleware } from './middlewares/notifyMiddleware';
 // import { validate } from './middlewares/validate'
 
 const TIMEOUT_MS = 800
@@ -33,18 +31,8 @@ export default new Service<Clients, RecorderState, ParamsContext>({
     // updateInventory: method({
     //   POST: [updateInventoryMiddleware],
     // }),
-    updateInventory: [
-      updateInventoryMiddleware,
+    notify: [
+      notifyMiddleware,
     ],
-  },
-  graphql: {
-    resolvers: {
-      Mutation: {
-        config: saveConfig
-      },
-      Query: {
-        config: getConfig
-      },
-    },
-  },
+  }
 })
