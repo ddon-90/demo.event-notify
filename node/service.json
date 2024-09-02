@@ -6,8 +6,11 @@
   "maxReplicas": 4,
   "workers": 1,
   "events": {
-    "notify": {
+    "catalogNotify": {
       "keys": ["broadcaster.notification"]
+    },
+    "orderNotify": {
+      "keys": ["order-status-updated"]
     }
   }
 }

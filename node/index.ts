@@ -31,7 +31,10 @@ export default new Service<Clients, RecorderState, ParamsContext>({
     // updateInventory: method({
     //   POST: [updateInventoryMiddleware],
     // }),
-    notify: [
+    catalogNotify: [
+      notifyMiddleware,
+    ],
+    orderNotify: [
       notifyMiddleware,
     ],
   }
